@@ -1,0 +1,17 @@
+---
+---
+<script type="text/javascript">
+	var baseURL = "{{ site.baseurl }}";
+	var links = document.getElementsByTagName("a");
+	for (i = 0; i < links.length; i++) {
+		if (links[i].href.substr(0, baseURL.length) !== baseURL) {
+			continue;
+		}
+		var sectionID = links[i].href.substr(baseURL.length);
+		var section = document.getElementById(sectionID);
+		if (section == null) {
+			continue;
+		}
+		links[i].href = "#"+sectionID;
+	}
+</script>
