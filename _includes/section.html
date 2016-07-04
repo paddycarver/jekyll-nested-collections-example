@@ -1,2 +1,2 @@
-<h2 id="{% if section.id %}{{ section.id }}{% else %}{{ section.title | slugify }}{% endif %}">{{ section.title }}</h2>
+<h2 id="{{ section.id }}.html">{{ section.title }}</h2>
 {{ section.content | markdownify }}
