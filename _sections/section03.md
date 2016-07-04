@@ -1,4 +1,5 @@
 ---
+title: Learning Something New
 chapter: 02
 ---
 

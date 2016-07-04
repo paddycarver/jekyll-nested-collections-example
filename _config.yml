@@ -6,7 +6,7 @@ baseurl: "https://paddyforan.github.io/jekyll-nested-collections-example"
 
 collections:
         sections:
-                output: false
+                output: true
         chapters:
                 output: true
 

@@ -1,16 +1,13 @@
 ---
 layout: default
 ---
-
-<div class="home">
-
-  <h1>Chapters</h1>
-
-  <ul class="posts">
-    {% for chapter in site.chapters %}
-      <li>
-        <a class="post-link" href="{{ chapter.url | prepend: site.baseurl }}">Chapter {{ chapter.chapter }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+{% assign chapters = site.sections | group_by:"chapter" | sort:"name" %}
+{% for chapter in chapters %}
+	{% assign chapter_data = site.chapters | where:"chapter",chapter.name %}
+	<h1 id="chapter{{ chapter_data[0].chapter }}">{{ chapter_data[0].title }}</h1>
+	{{ chapter_data[0].content | markdownify }}
+  {% assign sections = chapter.items | sort:"position" %}
+  {% for section in sections %}
+		{% include section.html %}
+  {% endfor %}
+{% endfor %}
