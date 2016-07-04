@@ -1,11 +1,13 @@
 <script type="text/javascript">
 	var baseURL = "{{ site.baseurl }}";
+	baseURL = baseURL.substr(baseURL.indexOf(":"))
 	var links = document.getElementsByTagName("a");
 	for (i = 0; i < links.length; i++) {
-		if (links[i].href.substr(0, baseURL.length) !== baseURL) {
+		var href = links[i].href.substr(links[i].href.indexOf(":"));
+		if (href.substr(0, baseURL.length) !== baseURL) {
 			continue;
 		}
-		var sectionID = links[i].href.substr(baseURL.length);
+		var sectionID = href.substr(baseURL.length);
 		var section = document.getElementById(sectionID);
 		if (section == null) {
 			continue;
