@@ -1,7 +1,6 @@
 ---
 title: My First Section
 chapter: 01
-id: "my-first-section"
 layout: section
 ---
 

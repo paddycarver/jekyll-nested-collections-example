@@ -1,7 +1,6 @@
 ---
 title: Look At Me Now!
 chapter: 01
-id: "look-at-me-now"
 layout: section
 ---
 
