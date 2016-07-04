@@ -7,3 +7,5 @@ layout: section
 And look, it has multiple parts!
 
 Each part can have multiple paragraphs.
+
+[This is a link to Section 01](/sections/section01.html)
